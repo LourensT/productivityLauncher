@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ProductivityLauncher</string>
+    <string name="title_activity_second_apps">SecondAppsActivity</string>
+</resources>
