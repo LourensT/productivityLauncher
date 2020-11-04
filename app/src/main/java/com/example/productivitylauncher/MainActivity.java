@@ -77,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(secondAppIntent);
     }
 
+    public void onLockClick(View v){
+        Intent secondAppIntent = new Intent(this, ChangeAppsActivity.class);
+        startActivity(secondAppIntent);
+    }
+
     public void onFillAppList(Context c){
 
         Intent i = new Intent(Intent.ACTION_MAIN, null);

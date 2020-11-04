@@ -41,11 +41,6 @@ public class SecondAppsAdapter extends BaseAdapter implements Filterable {
         return position;
     }
 
-    private class ViewHolder {
-        LinearLayout llContainer;
-        TextView tvLabel;
-    }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the data item for this position
