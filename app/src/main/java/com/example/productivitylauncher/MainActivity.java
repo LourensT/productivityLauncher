@@ -1,5 +1,6 @@
 package com.example.productivitylauncher;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -26,8 +27,12 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<String> IMPORTANT_APPS = Arrays.asList("WhatsApp", "Spotify", "Maps", "Albert Heijn", "YourHour", "Clock");
-    List<String> UNACCESSIBLE_APPS = Arrays.asList("Chrome", "Discord", "Duo", "Docs", "Files", "Gmail", "Google", "Netflix", "Play Games", "Play Movies & TV", "Play Store", "rif is fun", "Sheets", "Slides", "Snapchat", "Tinder", "YouTube");
+    public static String KEY_FILE_NAME = "key.txt";
+    //private String KEY_FILE_NAME = "storage.txt";
+
+
+    public static List<String> IMPORTANT_APPS = Arrays.asList("WhatsApp", "Spotify", "Maps", "Albert Heijn", "YourHour", "Clock");
+    public static List<String> UNACCESSIBLE_APPS = Arrays.asList("Chrome", "Discord", "Duo", "Docs", "Files", "Gmail", "Google", "Netflix", "Play Games", "Play Movies & TV", "Play Store", "rif is fun", "Sheets", "Slides", "Snapchat", "Tinder", "YouTube");
 
     ArrayList<appInfo> apps =  new ArrayList<>();
 
@@ -78,8 +83,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onLockClick(View v){
-        Intent secondAppIntent = new Intent(this, ChangeAppsActivity.class);
-        startActivity(secondAppIntent);
+        //Intent secondAppIntent = new Intent(this, ChangeAppsActivity.class);
+        //startActivity(secondAppIntent);
+        new PasswordFragment().show(getSupportFragmentManager(), "dialog");
     }
 
     public void onFillAppList(Context c){
